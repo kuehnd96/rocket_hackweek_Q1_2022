@@ -4,6 +4,7 @@ My employer has 3-4 hack weeks each year where work is put aside to level up you
 
 ## Resources
 - Udemy course: [Build an app with ASPNET Core and Angular from scratch](https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/)
+- Github Repo: [TryCatchLearn/DatingApp](https://github.com/trycatchlearn/datingapp)
 
 ## Tools
 
@@ -13,6 +14,7 @@ My employer has 3-4 hack weeks each year where work is put aside to level up you
 ## Technologies
 
 - .NET 6
+- NodeJS
 - Angular 12
 - Bootstrap
 - Automapper
