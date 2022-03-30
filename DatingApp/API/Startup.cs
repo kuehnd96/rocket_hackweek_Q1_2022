@@ -1,6 +1,8 @@
 using API.Data;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using API.Interfaces;
+using API.Services;
 
 namespace API
 {
@@ -18,6 +20,8 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             // sets up dependency injection
+            services.AddScoped<ITokenService, TokenService>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
