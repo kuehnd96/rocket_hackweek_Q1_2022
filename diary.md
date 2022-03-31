@@ -1,3 +1,6 @@
+## 3/31/2022
+Today was another fun and educational day. I learned about routing, error handling, and adding toast notification functionality to the Angular app (plus much more). Until tomorrow.  
+
 ## 3/30/2022
 Another fun day of learning has come to an end. I am mentally exhausted from this but I am having a blast. Today I learned more about using JWT's for bearer token authentication with a backend .NET API, how observables are an evolution of promises in JavaScript, and how to persist a login status in an Angular app (plus much more). I also continue to level up my Angular and C# skills in VS Code. I am looking forward to tomorrow.
 
