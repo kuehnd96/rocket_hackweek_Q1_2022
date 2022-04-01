@@ -1,3 +1,6 @@
+## 4/1/2022
+Today is the last day of my first Hack Week at my job. It has been a fun but exhausting week as I have learned a lot. I only made it through the first 7 sections of the Udemy course that I have been consuming. While this is not as far as I was hoping to go I am looking forward to working on this outside of work in the weeks ahead. My goal is to complete this learning initiative in the next couple of months. I will update this diary when I work on this repo.
+
 ## 3/31/2022
 Today was another fun and educational day. I learned about routing, error handling, and adding toast notification functionality to the Angular app (plus much more). Until tomorrow.  
 
