@@ -1,11 +1,4 @@
-using API.Data;
 using Microsoft.OpenApi.Models;
-using Microsoft.EntityFrameworkCore;
-using API.Interfaces;
-using API.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using API.Extensions;
 using API.Middleware;
 using API.SignalR;
@@ -67,6 +60,7 @@ namespace API
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<PresenceHub>("hubs/presence");
+                endpoints.MapHub<MessageHub>("hubs/message");
             });
         }
     }
