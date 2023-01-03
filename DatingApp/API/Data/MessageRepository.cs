@@ -59,17 +59,15 @@ namespace API.Data
 
         public async Task<IEnumerable<MessageDto>> GetMessageThread(string currentUsername, string recipientUsername)
         {
-            var messages = await _context.Messages
-                .Include(u => u.Sender).ThenInclude(p => p.Photos)
-                .Include(u => u.Recipient).ThenInclude(p => p.Photos)
+            var query = _context.Messages
                 .Where(m => m.Recipient.UserName == currentUsername && m.RecipientDeleted == false
                        && m.Sender.UserName == recipientUsername
                        || m.Recipient.UserName == recipientUsername
                        && m.Sender.UserName == currentUsername && m.SenderDeleted == false)
                 .OrderBy(m => m.MessageSent)
-                .ToListAsync();
+                .AsQueryable();
             
-            var unreadMessages = messages
+            var unreadMessages = query
                 .Where(m => m.DateRead == null && m.Recipient.UserName == currentUsername)
                 .ToList();
 
@@ -81,7 +79,7 @@ namespace API.Data
                 }
             }
 
-            return _mapper.Map<IEnumerable<MessageDto>>(messages);
+            return await query.ProjectTo<MessageDto>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
         public void AddGroup(Group group)
